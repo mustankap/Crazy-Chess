@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Square = () => {
+const Square = ({children, black}) => {
+    const bgClass = black ? 'square-black' : 'square-white'
   return (
-    <div>Square</div>
+    <div className={`${bgClass} board-square`}>
+    {children}
+    </div>
   )
 }
 
